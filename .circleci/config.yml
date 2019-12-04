@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.16.0
-      - image: selenium/standalone-chrome
+      - image: robcherry/docker-chromedriver
       - image: openjdk
 
     steps:
