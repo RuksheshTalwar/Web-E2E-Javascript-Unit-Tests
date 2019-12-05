@@ -41,6 +41,10 @@ class ProductDetailsPage {
         return $('//span[contains(text(),\'back to product\')]')
     }
 
+    get closeBckToProduct(){
+        return $('a.close.close-reveal-modal')
+    }
+
     get goToCartBtn(){
         return $('//span[contains(text(),\'go to cart\')]')
     }
@@ -113,6 +117,10 @@ class ProductDetailsPage {
         this.quantityTextField.waitForVisible(120000)
     }
 
+    clickCloseBckToProduct(){
+        this.closeBckToProduct.click()
+    }
+
     setProdQuantity(text){
         this.quantityTextField.setValue(text)
     }
@@ -125,8 +133,13 @@ class ProductDetailsPage {
         this.backToProductBtn.waitForVisible(120000)
     }
 
+    waitForCloseBackToProduct(){
+        this.closeBckToProduct.waitForVisible(120000)
+    }
+
     clickBackToProduct(){
         this.backToProductBtn.moveToObject()
+        browser.pause(3000)
         this.backToProductBtn.click()
     }
 

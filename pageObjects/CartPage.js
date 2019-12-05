@@ -69,7 +69,8 @@ class CartPage {
     }
 
     waitForGoToCheckoutToBeEnabled(){
-        this.goToCheckoutBtn.waitForEnabled()
+        this.goToCheckoutBtn.waitForEnabled(120000)
+        browser.pause(3000)
     }
 
     clickGoToCheckoutBtn(){
