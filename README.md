@@ -1,4 +1,4 @@
-# ChallengeTrivago
+# Javascript UI Unit Tests
 #Initiate the git on local:
 git init
 
